@@ -2,6 +2,15 @@
 
 function filterByCategory(products, category) {
   // your code here
+  const filteredProducts = [];
+
+  products.forEach(function(product) {
+    if (product.category === category) {
+      filteredProducts.push(product);
+    }
+  });
+
+  return filteredProducts;
 }
 
 console.log(filterByCategory([{ name: 'Apple', category: 'Fruit' }, { name: 'Carrot', category: 'Vegetable' }], 'Fruit')) // [{ name: 'Apple', category: 'Fruit' }]
